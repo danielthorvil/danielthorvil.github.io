@@ -66,22 +66,22 @@ I’m also gonna assume you can create the Entra groups yourself.
 
 <table style="border-width:0px;"><tbody><tr><td style="border:1px solid rgb(240, 240, 240);padding:4px 10px;"><strong>Group</strong></td><td style="border:1px solid rgb(240, 240, 240);padding:4px 10px;"><strong>Permissions</strong></td><td style="border:1px solid rgb(240, 240, 240);padding:4px 10px;"><strong>Members</strong></td></tr><tr><td style="border:1px solid rgb(240, 240, 240);padding:4px 10px;">FelixDB – Reader</td><td style="border:1px solid rgb(240, 240, 240);padding:4px 10px;">Read</td><td style="border:1px solid rgb(240, 240, 240);padding:4px 10px;">Bob</td></tr><tr><td style="border:1px solid rgb(240, 240, 240);padding:4px 10px;">FelixDB – Writer</td><td style="border:1px solid rgb(240, 240, 240);padding:4px 10px;">Read/write</td><td style="border:1px solid rgb(240, 240, 240);padding:4px 10px;">Alice</td></tr><tr><td style="border:1px solid rgb(240, 240, 240);padding:4px 10px;">&nbsp;</td><td style="border:1px solid rgb(240, 240, 240);padding:4px 10px;">&nbsp;</td><td style="border:1px solid rgb(240, 240, 240);padding:4px 10px;">&nbsp;</td></tr></tbody></table>
 
-![](https://github.com/danielthorvil/danielthorvil.github.io/blob/e887940056101675484e40ac7b10ecf4121a162f/assets/id0001-pic1.png)
+![](assets/post-content/0001/pic1.png)
 
-![](https://github.com/danielthorvil/danielthorvil.github.io/blob/e887940056101675484e40ac7b10ecf4121a162f/assets/id0001-pic2.png)
+![](assets/post-content/0001/pic2.png)
 
 ## **2) Logging in**
 
 I’m gonna start by connecting to the database using an Entra account, you cannot use an SQL account for this! You need to use an Entra user.  
 If you don’t know who has access to the server, then use the “Microsoft Entra admin” account. This user will always have the db\_owner role.
 
-![](https://github.com/danielthorvil/danielthorvil.github.io/blob/e887940056101675484e40ac7b10ecf4121a162f/assets/id0001-pic3.png)
+![](assets\post-content\0001\pic3.png)
 
 Remember to specify the correct database when connecting (because contained users). I’m using SQL Server Management Studio to connect.
 
-![](https://cloudwithfelix.com/wp-content/uploads/2024/03/Screenshot-2024-03-12-210036.png)
+![](assets\post-content\0001\pic4.png)
 
-![](https://cloudwithfelix.com/wp-content/uploads/2024/03/Screenshot-2024-03-12-210041.png)
+![](assets\post-content\0001\pic5.png)
 
 ### **3) Delegating permissions to groups**
 
