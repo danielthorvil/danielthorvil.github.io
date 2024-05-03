@@ -3,7 +3,7 @@ title: "Assign Azure SQL Database permissions to Entra users via groups"
 date: 2024-03-03 00:00:00 +0200
 categories: [Azure SQL Database]
 tags: [Azure SQL Database]
-identifier: 0001
+post-id: 0001
 ---
 
 ## **Scenario**
@@ -14,7 +14,7 @@ What are you gonna do, when you get a new employee that needs access? What if an
 
 Do you manually login to each database and run the SQL commands? Nooo, that would take a long time. I propose that you do it via a Entra groups instead, then it literally takes 2 seconds to give permissions to a user.
 
-Microsoft already has it documented that its possible, but they don’t really make it obvious (as of March 2024). It took me some time to figure out that it was possible (maybe i’m not the brightest 😄). So i’m making this post to help you out and show you how i think is a great way to do it.
+Microsoft already has it documented that its possible, but they don’t really make it obvious (as of writing this post). It took me some time to figure out that it was possible (maybe i’m not the brightest 😄). So i’m making this post to help you out and show you how i think is good way to do it.
 
 ## **Azure RBAC vs SQL permissions**
 
@@ -64,13 +64,13 @@ I’m also gonna assume you can create the Entra groups yourself.
 
 ### **1) Permissions i want to delegate.**
 
-<table style="border-width:0px;"><tbody><tr><td style="border:1px solid rgb(240, 240, 240);padding:4px 10px;"><strong>Group</strong></td><td style="border:1px solid rgb(240, 240, 240);padding:4px 10px;"><strong>Permissions</strong></td><td style="border:1px solid rgb(240, 240, 240);padding:4px 10px;"><strong>Members</strong></td></tr><tr><td style="border:1px solid rgb(240, 240, 240);padding:4px 10px;">FelixDB – Reader</td><td style="border:1px solid rgb(240, 240, 240);padding:4px 10px;">Read</td><td style="border:1px solid rgb(240, 240, 240);padding:4px 10px;">Bob</td></tr><tr><td style="border:1px solid rgb(240, 240, 240);padding:4px 10px;">FelixDB – Writer</td><td style="border:1px solid rgb(240, 240, 240);padding:4px 10px;">Read/write</td><td style="border:1px solid rgb(240, 240, 240);padding:4px 10px;">Alice</td></tr><tr><td style="border:1px solid rgb(240, 240, 240);padding:4px 10px;">&nbsp;</td><td style="border:1px solid rgb(240, 240, 240);padding:4px 10px;">&nbsp;</td><td style="border:1px solid rgb(240, 240, 240);padding:4px 10px;">&nbsp;</td></tr></tbody></table>
+<table style="border-width:0px;"><tbody><tr><td style="border:1px solid rgb(240, 240, 240);padding:4px 10px;"><strong>Group</strong></td><td style="border:1px solid rgb(240, 240, 240);padding:4px 10px;"><strong>Permissions</strong></td><td style="border:1px solid rgb(240, 240, 240);padding:4px 10px;"><strong>Members</strong></td></tr><tr><td style="border:1px solid rgb(240, 240, 240);padding:4px 10px;">FelixDB – Reader</td><td style="border:1px solid rgb(240, 240, 240);padding:4px 10px;">Read</td><td style="border:1px solid rgb(240, 240, 240);padding:4px 10px;">Bob</td></tr><tr><td style="border:1px solid rgb(240, 240, 240);padding:4px 10px;">FelixDB – Writer</td><td style="border:1px solid rgb(240, 240, 240);padding:4px 10px;">Read/write</td><td style="border:1px solid rgb(240, 240, 240);padding:4px 10px;">Alice</td></tr></tbody></table>
 
 ![](assets/post-content/0001/pic1.png)
 
 ![](assets/post-content/0001/pic2.png)
 
-## **2) Logging in**
+### **2) Logging in**
 
 I’m gonna start by connecting to the database using an Entra account, you cannot use an SQL account for this! You need to use an Entra user.  
 If you don’t know who has access to the server, then use the “Microsoft Entra admin” account. This user will always have the db\_owner role.
