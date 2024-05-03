@@ -75,13 +75,13 @@ I’m also gonna assume you can create the Entra groups yourself.
 I’m gonna start by connecting to the database using an Entra account, you cannot use an SQL account for this! You need to use an Entra user.  
 If you don’t know who has access to the server, then use the “Microsoft Entra admin” account. This user will always have the db\_owner role.
 
-![](assets\post-content\0001\pic3.png)
+![](assets/post-content/0001/pic3.png)
 
 Remember to specify the correct database when connecting (because contained users). I’m using SQL Server Management Studio to connect.
 
-![](assets\post-content\0001\pic4.png)
+![](assets/post-content/0001/pic4.png)
 
-![](assets\post-content\0001\pic5.png)
+![](assets/post-content/0001/pic5.png)
 
 ### **3) Delegating permissions to groups**
 
