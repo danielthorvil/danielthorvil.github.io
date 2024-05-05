@@ -6,9 +6,9 @@ categories:
 post-id: 0002
 ---
 
-## **The requirements for my weekly reboots**
+## **The requirements for the reboots**
 
-We needed to make sure our endpoints got weekly reboots. The task was “if uptime is more than 7 days, then reboot”.
+I needed to make sure some endpoints got weekly reboots. The task was “if uptime is more than 7 days, then reboot”.
 
 ## **Why Intune, whyyy**
 
