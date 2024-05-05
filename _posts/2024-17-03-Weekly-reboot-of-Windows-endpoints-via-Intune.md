@@ -14,7 +14,7 @@ We needed to make sure our endpoints got weekly reboots. The task was “if upti
 
 With Intune at the moment, you are not able to say “if uptime is more than X, then reboot”. The only option via the setting catalog is a daily reboot at a specific time, or a reboot at 1 specified date. There is also a setting which allows you to reboot at a specified day and time weekly, however its currently in preview, and does not satisfy the requirement i had.
 
-![](assets\post-content\0002\0002-01.png)
+![](assets/post-content/0002/0002-01.png)
 
 ## **Powershell script**
 
