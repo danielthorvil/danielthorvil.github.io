@@ -1,8 +1,9 @@
 ---
 title: "Assign Azure SQL Database permissions to Entra users via groups"
 date: 2024-03-03 00:00:00 +0200
-categories: [Azure SQL Database]
-tags: [Azure SQL Database]
+categories: 
+    - Azure
+    - Azure SQL Database
 post-id: 0001
 ---
 
