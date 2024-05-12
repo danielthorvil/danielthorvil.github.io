@@ -97,9 +97,9 @@ comments:
   # Giscus options › https://giscus.app
   giscus:
     repo: danielthorvil/danielthorvil.github.io
-    repo_id: 795673914
-    category: 
-    category_id: 
+    repo_id: R_kgDOL20FOg
+    category: Comments
+    category_id: DIC_kwDOL20FOs4CfTTD
     mapping: # optional, default to 'pathname'
     input_position: # optional, default to 'bottom'
     lang: # optional, default to the value of `site.lang`
