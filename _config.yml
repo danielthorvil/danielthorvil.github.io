@@ -98,8 +98,8 @@ comments:
   giscus:
     repo: danielthorvil/danielthorvil.github.io
     repo_id: 795673914
-    category: Comments
-    category_id: 41759939
+    category: 
+    category_id: 
     mapping: # optional, default to 'pathname'
     input_position: # optional, default to 'bottom'
     lang: # optional, default to the value of `site.lang`
