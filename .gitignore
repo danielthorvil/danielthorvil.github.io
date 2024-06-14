@@ -27,6 +27,6 @@ assets/js/dist
 .terraform.lock.hcl
 terraform.tf
 _posts/2024-01-06-0004.md
+assets/post-content/0004/tf/main.tf
 assets/post-content/0004/tf/terraform.tfvars
 assets/post-content/0004/tf/variables.tf
-assets/post-content/0004/tf/main.tf
